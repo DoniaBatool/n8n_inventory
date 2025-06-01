@@ -1,0 +1,20 @@
+# render.yaml
+services:
+  - type: web
+    name: n8n-inventory
+    env: docker
+    plan: free
+    autoDeploy: false
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: mypublic
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: mypublic_donia
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://n8n-inventory.onrender.com
